@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Random Number Generator</title>
+
+<script type="text/javascript">
+
+
+function chooseRandom(form){
+	
+	var m = parseInt(form.lower.value);
+
+	var n = parseInt(form.upper.value) - m;
+
+	
+	var output = Math.round(Math.random() * n) + m;
+
+	result.innerHTML = "Your number is " + output;
+
+
+}
+
+
+
+	
+
+</script>
+
+<style type="text/css">
+
+
+
+#random_number_generator{
+	margin: 0 auto;
+	width: 500px;
+	padding: 20px;
+
+
+}
+
+#logo{
+	width: 300px;
+
+}
+
+#image{
+	display: block;
+	width: 400px;
+	margin: 20px auto;
+
+}
+
+#lower{
+	display:block;
+	margin-bottom: 5px;
+}
+
+#higher{
+	display:block;
+	margin-bottom: 5px;
+}
+
+#randomise{
+	display:block;
+	margin-bottom: 5px;
+}
+
+
+#result{
+	display: block;
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+	font: 6.5em Verdana, Sans-serif;
+
+}
+
+#button{
+	width: 17em; height: 2em;
+	display: block;
+	margin: 0 auto 20px;
+	font-size: 1.5em;
+}
+
+</style>
+
+
+
+
+</head>
+
+<body>
+
+<span id="logo"><img src="sagelogo.jpg" id="image"></span>
+<form name = "generate">
+  
+    <span id="lower">Enter a lower limit:
+      <input type="Text" name="lower" size="5" value="0"></span>
+    
+    <span id="higher">Enter an upper limit:
+      <input type="Text" name="upper" size="5" value="100"></span>
+
+
+<div id="random_number_generator">
+
+    <span id="randomise"><input TYPE="button" id="button" name="send_it" VALUE="Randomise" onClick="chooseRandom(this.form)"></span>
+   
+</form></div>
+ <span id="result"><span>
+</body>
+
+</html>
